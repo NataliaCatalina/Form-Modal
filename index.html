@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form in a modal</title>
+</head>
+<body>
+    <main>
+
+        <div class="registration">
+            <form>
+                <h1>LOGIN</h1>
+                <br>
+                <input type="text" placeholder="Username or Email" class="email">
+                <span class="errors" id="emailError"></span>
+                <input type="text" placeholder="Enter Password" name="password" class="password" >
+                <span class="errors" id="passwordError"></span>
+                <input type="submit" class="submitBtn" value="Login">
+                <p class="account">No account?<a class="show-modal"> Get one here.</a></p>
+            </form>
+        </div>
+
+        <div class="modal hidden">
+            <form action="action_page">
+                <div>
+                  <button class="close-modal">&times;</button>
+                  <h1>SIGN UP</h1>
+                  <br>
+                  <input type="text" placeholder="Username" id="userName">
+                  <span class="errors" id="userNameError"></span>
+                  <input type="text" placeholder="E-mail" name="email" class="email" >
+                  <span class="errors" id="emailError"></span>
+                  <input type="text" placeholder="Enter Password" name="password" class="password" >
+                  <span class="errors" id="passwordError"></span>
+                  <input type="submit" class="submitBtn">
+                </div>
+
+                <p class="createAccount">Already have an account?<a class="">Sign in</a></p>
+                
+
+                
+              </form>
+        </div>
+
+        <div class="overlay hidden"></div>
+
+
+    </main>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
