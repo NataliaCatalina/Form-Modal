@@ -46,9 +46,9 @@ body {
     z-index: 10;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 .close-modal {
     position: absolute;

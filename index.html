@@ -9,7 +9,7 @@
 <body>
     <main>
 
-        <div class="registration">
+        <!-- <div class="registration">
             <form>
                 <h1>LOGIN</h1>
                 <br>
@@ -20,20 +20,20 @@
                 <input type="submit" class="submitBtn" value="Login">
                 <p class="account">No account?<a class="show-modal"> Get one here.</a></p>
             </form>
-        </div>
+        </div> -->
 
         <div class="modal hidden">
-            <form action="action_page">
+            <form action="">
                 <div>
                   <button class="close-modal">&times;</button>
                   <h1>SIGN UP</h1>
                   <br>
-                  <input type="text" placeholder="Username" id="userName">
                   <span class="errors" id="userNameError"></span>
+                  <input type="text" placeholder="UserName" class="userName">
+                  <span class="errors" id="emailNameError"></span>
                   <input type="text" placeholder="E-mail" name="email" class="email" >
-                  <span class="errors" id="emailError"></span>
+                  <span class="errors" id="passwordNameError"></span>
                   <input type="text" placeholder="Enter Password" name="password" class="password" >
-                  <span class="errors" id="passwordError"></span>
                   <input type="submit" class="submitBtn">
                 </div>
 

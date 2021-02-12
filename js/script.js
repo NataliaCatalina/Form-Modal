@@ -15,39 +15,98 @@ document.querySelector(".submitBtn").addEventListener('click', function(event){
     event.preventDefault(); //stop the default page from loading
 
     //capture form input values
-    let userName = document.querySelector('#userName').value;
+    let userName = document.querySelector('.userName').value;
     let emailName = document.querySelector('.email').value;
     let passwordName = document.querySelector('.password').value;
     
-
+    
     //get reference to our error tags
     let userNameError = document.querySelector('#userNameError');
-    let emailError = document.querySelector('#emailError');
+    let emailNameError = document.querySelector('#emailNameError');
+    let passwordNameError = document.querySelector('#passwordNameError');
 
-    // console.log(userName, emailName, passwordName);
+     console.log(userName, emailName, passwordName);
 
-    //test for empty values
-    if (userName == '') {
-        userNameError.textContent = "Please enter your name";
-    } else if(userName.length >=20){
-        userNameError.textContent = "Please enter a Shorter Name";
-    } else {
-        userNameError.textContent = " ";
+     //we want to initialise an array to store feedback messages
+     let messages = []
+
+    //validate the form inputs by invoking the validate function
+     messages['userNameError'] = validate(userName);
+     messages['emailNameError'] = validate(emailName);
+     messages['passwordNameError'] = validate(passwordName);
+
+     userNameError.textContent = messages['userNameError'];
+     emailNameError.textContent = messages['emailNameError'];
+     passwordNameError.textContent = messages['passwordNameError'];
+
+     console.log(messages)
+
+    });
+
+    function validate(userInput) {
+        console.log(userInput);
+
+        // let variableOne = '';
+        // let result = variableOne.test(userInput);
+        // console.log(result);
+
+        if(userInput == '') {
+            return 'Please enter a value';
+        } 
+
+
+
     }
 
-    if(emailName == '') {
-        emailError.textContent = "Please enter a Email";
-    } else {
-        emailError.textContent = " ";
-    }
 
-    if(passwordName == '') {
-        passwordError.textContent = "Please enter a Password";
-    } else {
-        emailError.textContent = " ";
-    }
 
-});
+    // //test for empty values
+    // if (userName == '') {
+    //     userNameError.textContent = "Please enter your Username";
+    // } else if(userName.length >=20){
+    //     userNameError.textContent = "Please enter a Shorter Username";
+    // } else {
+    //     userNameError.textContent = " ";
+    // }
+
+    // if(emailName == '') {
+    //     emailError.textContent = "Please enter a Email";
+    // } else {
+    //     emailError.textContent = " ";
+    // }
+
+    // if(passwordName == '') {
+    //     passwordError.textContent = "Please enter a Password";
+    // } else {
+    //     emailError.textContent = "database ready";
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /** MODAL **/
@@ -57,7 +116,7 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 
-console.log(btnsOpenModal);
+// console.log(btnsOpenModal);
 
 //create open and close function 
 const openModal = function () {
